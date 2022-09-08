@@ -1,8 +1,5 @@
 import express from 'express';
 import morgan from 'morgan';
-import React from 'react';
-import { renderToString } from 'react-dom/server';
-import Layout from './components/Layout';
 import indexRouter from './routes/indexRouter';
 
 const PORT = 3000;
@@ -14,5 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/', indexRouter);
+
+app.get('/user')
 
 app.listen(PORT, () => console.log(`App has started on port ${PORT}`));
