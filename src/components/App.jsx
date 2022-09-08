@@ -1,15 +1,20 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Card from './Card';
-import Video from './Video';
+
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './Navbar';
+import Registration from './Registration';
 
 export default function App() {
   return (
-    <>
-      <Video />
-      <Routes>
-        <Route path="/Card" element={Card} />
-      </Routes>
-    </>
+    <div className="container">
+      <div className="row">
+        <Navbar />
+        <Routes>
+          <Route path="/registr" element={<Registration />} />
+
+        </Routes>
+      </div>
+    </div>
+
   );
 }
