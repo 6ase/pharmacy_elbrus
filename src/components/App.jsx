@@ -6,9 +6,7 @@ import Navbar from './Navbar';
 import Oneproduct from './pages/Oneproduct';
 import Registration from './Registration';
 
-export default function App({ ProductById }) {
-
-export default function App({ userSession }) {
+export default function App({ userSession, ProductById }) {
   const [authState, setAuthState] = useState(userSession || null);
   return (
 
@@ -17,7 +15,6 @@ export default function App({ userSession }) {
         <Video />
         <Navbar authState={authState} setAuthState={setAuthState} />
         <Routes>
-          <Route path="/registr" element={<Registration />} />
           <Route path="/products/:id" element={<Oneproduct product={ProductById} />} />
           <Route path="/signup" element={<Registration setAuthState={setAuthState} />} />
           <Route path="/signin" element={<Login setAuthState={setAuthState} />} />
