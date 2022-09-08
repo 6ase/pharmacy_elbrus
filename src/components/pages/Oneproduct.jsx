@@ -17,17 +17,24 @@ export default function Oneproduct({ product }) {
     //     <a href="#" className="btn btn-primary">Купить</a>
     //   </div>
     // </div>
-    <div className="card mb-3" style={{ maxWidth: '540px' }}>
+    <div
+      className="card mb-3"
+      style={{ maxWidth: '540px', boxShadow: '11px 14px 9px 1px silver', borderColor: 'darkgreen' }}
+    >
       <div className="row g-0">
         <div className="col-md-4">
-          <img src={`${product.img}`} className="img-fluid rounded-start" alt="таблеточка" />
+          <img src={`${product.img}`} className="img-fluid rounded-start img-thubnail" alt="таблеточка" />
         </div>
-        <div className="col-md-8">
+        <div
+          className="col-md-8"
+        >
           <div className="card-body">
             <h5 className="card-title">{product.title}</h5>
             <p className="card-text">{product.desc}</p>
             <p className="card-text"><small className="text-muted" /></p>
-            <a href="#" className="btn btn-primary">{`${product.price} ₽`}</a>
+            <div />
+            <h5>{`Цена ${product.price} ₽`}</h5>
+            <a href="#" className="btn btn-success">Купить</a>
           </div>
         </div>
       </div>
