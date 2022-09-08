@@ -14,7 +14,7 @@ export default function Navbar({ authState, setAuthState }) {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navCont navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         <NavLink className="navbar-brand fs-1 fw-light" to="/">
           <img src="https://kartinkin.net/uploads/posts/2022-03/1646968151_14-kartinkin-net-p-ekologiya-kartinki-dlya-prezentatsii-15.png" alt="" width="100" height="60" style={{ 'margin-right': '10}' }} className="d-inline-block align-text-top" />

@@ -8,6 +8,7 @@ lerna-debug.log*
 .pnpm-debug.log*
 public/app.js
 public/vendor.js
+public/video/video2.mp4
 sessions/
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
@@ -131,3 +132,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+

@@ -1,17 +1,18 @@
 import React from 'react';
-import setVideoCenter from '../../public/video/video.mp4';
 
 export default function Video() {
-  const video = setVideoCenter();
   return (
-    <div className="video-box">
-      <video autoPlay loop muted controls="">
-        <source src="'../../public//video/video.mp4'" type="video/mp4" />
-      </video>
-
-      <div className="video-content">
-        {video}
+    <div className="body_video">
+      {/* <div className="full-screen"> */}
+      <div className="full-screen__body">
+        <div className="full-screen__title"> АПТЭКО</div>
+        <div className="full-screen__text">Бахнем и пойдём?</div>
       </div>
+      <video poster="video/preVideo.png" autoPlay muted loop preload="auto" className="full-screen__video">
+        <source type="video/mp4" src="/video/video2.mp4" />
+      </video>
     </div>
+  // </div>
+
   );
 }
