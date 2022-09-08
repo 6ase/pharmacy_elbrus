@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
-import { Entry } from '../db/models';
+// import { Entry } from '../db/models';
 import Layout from '../components/Layout';
 
 const router = Router();
