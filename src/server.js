@@ -1,5 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
+
+import indexProduct from './routes/indexProduct';
 import session from 'express-session';
 import store from 'session-file-store';
 import indexRouter from './routes/indexRouter';
@@ -31,6 +33,9 @@ app.use(express.json());
 app.use(session(sessionConfig));
 
 app.use('/', indexRouter);
+app.use('/category', indexProduct);
+app.get('/user');
 app.use('/user', userRouter);
+
 
 app.listen(PORT, () => console.log(`App has started on port ${PORT}`));
