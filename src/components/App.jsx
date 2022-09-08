@@ -1,17 +1,24 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Card from './Card';
-import Video from './Video';
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Login from './Login';
+
 import Navbar from './Navbar';
 
-export default function App() {
+export default function App({ userSession }) {
+  const [authState, setAuthState] = useState(userSession || null);
   return (
-    <div>
-      <Navbar />
-      <Video />
-      <Routes>
-        <Route path="/Card" element={Card} />
-      </Routes>
+
+    <div className="container">
+      <div className="row">
+        <Navbar authState={authState} setAuthState={setAuthState} />
+        <Routes>
+
+          <Route path="/signup" element={<Registration setAuthState={setAuthState} />} />
+          <Route path="/signin" element={<Login setAuthState={setAuthState} />} />
+
+        </Routes>
+      </div>
+
     </div>
   );
 }
