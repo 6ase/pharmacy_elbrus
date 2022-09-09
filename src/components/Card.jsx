@@ -2,12 +2,11 @@ import React from 'react';
 
 export default function Oneproduct({ product }) {
   const addBacket = async () => {
+    const param = product.id;
     await fetch('/api/v1/backet', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(product.id),
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify({ id: param }),
     });
   };
 
