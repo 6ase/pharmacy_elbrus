@@ -11,16 +11,23 @@ export default function App({
   userSession, ProductById, allProducts, userBasket,
 }) {
   const [products, setProducts] = useState(allProducts || []);
-
   const [authState, setAuthState] = useState(userSession || null);
+  const [search, setSearch] = useState('');
 
+  // useEffect(() => {
+  //   fetch('/api/products').then((res) => res.json()).then((data) => setProducts(data));
+  // }, []);
   return (
-
     <>
-      <Navbar authState={authState} setAuthState={setAuthState} />
+      <Navbar
+        authState={authState}
+        search={search}
+        setSearch={setSearch}
+        setAuthState={setAuthState}
+      />
 
       <Routes>
-        <Route path="/" element={<Products path="/" allProducts={products} />} />
+        <Route path="/" element={<Products path="/" search={search} allProducts={products} setProducts={setProducts} />} />
         <Route path="/products/:id" element={<Oneproduct product={ProductById} />} />
         <Route path="/signup" element={<Registration setAuthState={setAuthState} />} />
         <Route path="/signin" element={<Login setAuthState={setAuthState} />} />

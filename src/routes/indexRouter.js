@@ -15,4 +15,15 @@ router.get('/', async (req, res) => {
   res.end(html);
 });
 
+router.get('/api/products', async (req, res) => {
+  const allProducts = await Product.findAll();
+  // console.log(allProducts);
+  res.json({ allProducts });
+});
+
+router.get('/api/products/:id', async (req, res) => {
+  const { id } = req.params;
+  const ProductById = await Product.findByPk(id);
+  res.json({ prod: ProductById });
+});
 export default router;

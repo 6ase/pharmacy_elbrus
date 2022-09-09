@@ -28,33 +28,42 @@ export default function Registration({ setAuthState }) {
   };
 
   return (
-    <div
-      className="card mb-3 w-50 d-flex"
-      style={{ maxWidth: '540px', boxShadow: '4px 7px 6px 1px silver' }}
-    >
-      <h1>Регистрация</h1>
-      <form onSubmit={submitHandler}>
-        <div className="mb-3">
-          <label htmlFor="exampleInputName1" className="form-label">
-            Имя
-            <input name="login" onChange={changeHandler} value={inputs.login} type="name" className="form-control" id="exampleInputName1" />
-          </label>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">
-            Почта
-            <input name="email" onChange={changeHandler} value={inputs.email} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-          </label>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label">
-            Пароль
-            <input name="password" onChange={changeHandler} value={inputs.password} type="password" className="form-control" id="exampleInputPassword1" />
-          </label>
-        </div>
+    <>
+      {/* <h1>Регистрация</h1> */}
+      <div
+        className="reg-container"
+        style={{
+          width: '100vw',
+          height: '100vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
 
-        <button type="submit" className="btn btn-primary">Submit</button>
-      </form>
-    </div>
+        <form onSubmit={submitHandler}>
+          <div className="mb-3">
+            <label htmlFor="exampleInputName1" className="form-label">
+              <h1>Имя</h1>
+              <input name="login" onChange={changeHandler} value={inputs.login} type="name" className="form-control" id="exampleInputName1" />
+            </label>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">
+              <h1>Почта</h1>
+              <input name="email" onChange={changeHandler} value={inputs.email} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            </label>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">
+              <h1>Пароль</h1>
+              <input name="password" onChange={changeHandler} value={inputs.password} type="password" className="form-control" id="exampleInputPassword1" />
+            </label>
+          </div>
+
+          <button type="submit" className="btn btn-success btn-lg">Submit</button>
+        </form>
+      </div>
+    </>
   );
 }

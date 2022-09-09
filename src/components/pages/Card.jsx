@@ -1,16 +1,10 @@
 import React from 'react';
 
 export default function Card({ product }) {
-  // const onAdd = (e) => {
-  //   e.preventDefault();
-    
-  // };
   return (
     <div
       className="card mb-3"
-      style={{
-        maxWidth: '540px', boxShadow: '11px 14px 9px 1px silver', borderColor: 'darkgreen', justifyContent: 'space-between',
-      }}
+      style={{ maxWidth: '540px', boxShadow: '4px 7px 6px 1px silver' }}
     >
       <div className="row g-0">
         <div className="col-md-4">
@@ -23,8 +17,9 @@ export default function Card({ product }) {
             <h5 className="card-title">{product.title}</h5>
             <p className="card-text"><small className="text-muted" /></p>
             <div />
-            <h5>Цена 0,00 ₽</h5>
-            <button className="btn btn-success" >Купить</button>
+            <h5>Бесплатно!</h5>
+            <a href="#" className="btn btn-outline-success">В корзину</a>
+            <button type="submit" className="btn btn-danger" style={{ marginLeft: '4rem' }} disabled>Акция!</button>
           </div>
         </div>
       </div>

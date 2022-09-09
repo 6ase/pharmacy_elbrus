@@ -22,12 +22,12 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   const { id } = req.params;
   const ProductById = await Product.findByPk(id);
-  const initState = { path: req.originalUrl, ProductById };
+  const allProducts = await Product.findAll();
+  const initState = { path: req.originalUrl, ProductById, allProducts };
   const layout = React.createElement(Layout, { initState });
   const html = renderToString(layout);
   res.write('<!DOCTYPE html>');
   res.end(html);
 });
-
 
 export default router;
