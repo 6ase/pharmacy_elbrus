@@ -59,13 +59,14 @@ export default function Navbar({ authState, setAuthState }) {
             ? (
 
               <>
-
                 <NavLink to="/signup" className="btn btn-success m-2"><strong>Зарегистрироваться</strong></NavLink>
                 <NavLink to="/signin" className="btn btn-outline-success m-2">Войти</NavLink>
               </>
             ) : (
-
-              <a onClick={logoutHandler} className="btn btn-logout-success m-2" href="logout">Выход</a>
+              <>
+                <NavLink to="/backet" className="btn btn-outline-success m-2">Корзина</NavLink>
+                <a onClick={logoutHandler} className="btn btn-logout-success m-2" href="logout">Выход</a>
+              </>
             )}
         </div>
       </div>

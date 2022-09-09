@@ -1,10 +1,12 @@
 import React from 'react';
 
-export default function Oneproduct({ product }) {
+export default function Card({ product }) {
   return (
     <div
       className="card mb-3"
-      style={{ maxWidth: '540px', boxShadow: '11px 14px 9px 1px silver', borderColor: 'darkgreen' }}
+      style={{
+        maxWidth: '540px', boxShadow: '11px 14px 9px 1px silver', borderColor: 'darkgreen', justifyContent: 'space-between',
+      }}
     >
       <div className="row g-0">
         <div className="col-md-4">
@@ -15,10 +17,9 @@ export default function Oneproduct({ product }) {
         >
           <div className="card-body">
             <h5 className="card-title">{product.title}</h5>
-            <p className="card-text">{product.desc}</p>
             <p className="card-text"><small className="text-muted" /></p>
             <div />
-            <h5>{`Цена ${product.price} ₽`}</h5>
+            <h5>Цена 0,00 ₽</h5>
             <a href="#" className="btn btn-success">Купить</a>
           </div>
         </div>

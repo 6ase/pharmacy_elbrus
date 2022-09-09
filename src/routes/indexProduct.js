@@ -11,6 +11,13 @@ const router = express.Router();
 //   const initState = { path: req.originalUrl, allStudents };
 //   res.layout(initState);
 // });
+router.get('/', async (req, res) => {
+  const initState = { path: req.originalUrl };
+  const layout = React.createElement(Layout, { initState });
+  const html = renderToString(layout);
+  res.write('<!DOCTYPE html>');
+  res.end(html);
+});
 
 router.get('/:id', async (req, res) => {
   const { id } = req.params;
