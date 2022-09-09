@@ -7,7 +7,6 @@ import Layout from '../components/Layout';
 const router = Router();
 
 router.get('/', async (req, res) => {
-  // const entries = await Entry.findAll({ order: [['id', 'DESC']] });
   const allProducts = await Product.findAll();
   const initState = { path: req.originalUrl, allProducts };
   const layout = React.createElement(Layout, { initState });
