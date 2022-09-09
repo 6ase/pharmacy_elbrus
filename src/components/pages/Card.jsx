@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default function Card({ product }) {
+  // const onAdd = (e) => {
+  //   e.preventDefault();
+    
+  // };
   return (
     <div
       className="card mb-3"
@@ -20,7 +24,7 @@ export default function Card({ product }) {
             <p className="card-text"><small className="text-muted" /></p>
             <div />
             <h5>Цена 0,00 ₽</h5>
-            <a href="#" className="btn btn-success">Купить</a>
+            <button className="btn btn-success" >Купить</button>
           </div>
         </div>
       </div>

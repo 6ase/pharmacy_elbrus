@@ -11,7 +11,7 @@ router.post('/signup', async (req, res) => {
     const user = await User.findOne({ where: { email } });
     if (!user) {
       const newUser = await User.create({ login, email, password: hashPassword });
-      req.session.userSession = { email: newUser.email };
+      req.session.userSession = { id: newUser.id, email: newUser.email };
       return res.json({ email: newUser.email });
     }
     res.status(400).json({ message: 'Такой email уже занят' });
@@ -27,7 +27,7 @@ router.post('/signin', async (req, res) => {
     if (user) {
       const checkPass = await bcrypt.compare(password, user.password);
       if (checkPass) {
-        req.session.userSession = { email: user.email };
+        req.session.userSession = { id: user.id, email: user.email };
         return res.json({ email: user.email });
       }
     }
