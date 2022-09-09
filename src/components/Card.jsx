@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Oneproduct({ product }) {
   const addBacket = async () => {
     const param = product?.id;
+
     await fetch('/api/v1/backet', {
       method: 'POST',
       headers: { 'Content-type': 'application/json' },

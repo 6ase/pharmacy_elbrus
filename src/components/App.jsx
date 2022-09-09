@@ -7,7 +7,9 @@ import Registration from './Registration';
 import Products from './Products';
 import Backet from './pages/Backet';
 
-export default function App({ userSession, ProductById, allProducts }) {
+export default function App({
+  userSession, ProductById, allProducts, userBasket,
+}) {
   const [products, setProducts] = useState(allProducts || []);
   const [authState, setAuthState] = useState(userSession || null);
   const [search, setSearch] = useState('');
@@ -29,7 +31,7 @@ export default function App({ userSession, ProductById, allProducts }) {
         <Route path="/products/:id" element={<Oneproduct product={ProductById} />} />
         <Route path="/signup" element={<Registration setAuthState={setAuthState} />} />
         <Route path="/signin" element={<Login setAuthState={setAuthState} />} />
-        <Route path="/backet" element={<Backet />} />
+        <Route path="/backet" element={<Backet userBasket={userBasket} />} />
       </Routes>
 
     </>
