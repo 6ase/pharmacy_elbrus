@@ -3,8 +3,6 @@ import React from 'react';
 export default function Video() {
   return (
     <div className="body_video">
-      {/* <div className="full-screen"> */}
-      
       <div className="full-screen__body">
         <div className="full-screen__title"> АПТЭКО</div>
         <div className="full-screen__text">Бахнем и пойдём?</div>
@@ -13,7 +11,6 @@ export default function Video() {
         <source type="video/mp4" src="/video/intro.webm" />
       </video>
     </div>
-  // </div>
 
   );
 }
