@@ -49,7 +49,7 @@ export default function Login({ setAuthState }) {
           </label>
         </div>
         <button type="submit" className="btn btn-primary">Войти</button>
-        {error && <div style={{ color: 'darkslategray', background: 'lightgreen' }}>Неверный пароль или почта</div>}
+        {error && <div style={{ color: 'darkslategray' }}>Неверный пароль или почта</div>}
 
       </form>
     </>

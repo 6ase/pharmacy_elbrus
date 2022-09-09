@@ -5,7 +5,8 @@ export default function Oneproduct({ product }) {
     const param = product.id;
     await fetch('/api/v1/backet', {
       method: 'POST',
-      body: param,
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify({ id: param }),
     });
   };
 

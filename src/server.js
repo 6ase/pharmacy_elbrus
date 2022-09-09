@@ -35,7 +35,7 @@ app.use(session(sessionConfig));
 
 app.use('/', indexRouter);
 app.use('/products', indexProduct);
-app.get('/user');
+app.use('/backet', apiBacketRouter);
 app.use('/user', userRouter);
 app.use('/api/v1/backet', apiBacketRouter);
 
