@@ -17,8 +17,9 @@ export default function Card({ product }) {
             <h5 className="card-title">{product.title}</h5>
             <p className="card-text"><small className="text-muted" /></p>
             <div />
-            <h5>Цена 0,00 ₽</h5>
-            <a href="#" className="btn btn-success">Купить</a>
+            <h5>Бесплатно!</h5>
+            <a href="#" className="btn btn-outline-success">В корзину</a>
+            <button type="submit" className="btn btn-danger" style={{ marginLeft: '4rem' }} disabled>Акция!</button>
           </div>
         </div>
       </div>

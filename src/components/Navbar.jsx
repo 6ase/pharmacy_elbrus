@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 
-export default function Navbar({ authState, setAuthState }) {
+export default function Navbar({
+  authState, setAuthState, search, setSearch,
+}) {
   const navigate = useNavigate();
-  const [userName, setUserName] = useState('');
-  const [search, setSearch] = useState('');
 
   const logoutHandler = async (e) => {
     e.preventDefault();
@@ -33,12 +33,13 @@ export default function Navbar({ authState, setAuthState }) {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
+
         <form className="d-flex" role="search" style={{ padding: '20px' }}>
 
           <input
             name="search"
+            onChange={(e) => setSearch(e.target.value)}
             value={search}
-            
             className="form-control me-2"
             type="search"
             placeholder="Search"
@@ -87,5 +88,6 @@ export default function Navbar({ authState, setAuthState }) {
         </div>
       </div>
     </nav>
+
   );
 }

@@ -6,7 +6,7 @@ import store from 'session-file-store';
 import indexProduct from './routes/indexProduct';
 import indexRouter from './routes/indexRouter';
 import userRouter from './routes/userRouter';
-
+import apiBacketRouter from './routes/apiBacketRouter';
 
 require('dotenv').config();
 
@@ -37,5 +37,6 @@ app.use('/', indexRouter);
 app.use('/products', indexProduct);
 app.get('/user');
 app.use('/user', userRouter);
+app.use('/api/v1/backet', apiBacketRouter);
 
 app.listen(PORT, () => console.log(`App has started on port ${PORT}`));
