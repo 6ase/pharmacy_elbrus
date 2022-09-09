@@ -4,9 +4,7 @@ export default function Card({ product }) {
   return (
     <div
       className="card mb-3"
-      style={{
-        maxWidth: '540px', boxShadow: '11px 14px 9px 1px silver', borderColor: 'darkgreen', justifyContent: 'space-between',
-      }}
+      style={{ maxWidth: '540px', boxShadow: '4px 7px 6px 1px silver' }}
     >
       <div className="row g-0">
         <div className="col-md-4">

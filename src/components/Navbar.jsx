@@ -4,6 +4,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 export default function Navbar({ authState, setAuthState }) {
   const navigate = useNavigate();
   const [userName, setUserName] = useState('');
+  const [search, setSearch] = useState('');
 
   const logoutHandler = async (e) => {
     e.preventDefault();
@@ -33,7 +34,17 @@ export default function Navbar({ authState, setAuthState }) {
           <span className="navbar-toggler-icon" />
         </button>
         <form className="d-flex" role="search" style={{ padding: '20px' }}>
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+
+          <input
+            name="search"
+            value={search}
+            
+            className="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+
           <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
