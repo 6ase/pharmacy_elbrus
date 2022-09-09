@@ -35,6 +35,7 @@ export default function Login({ setAuthState }) {
     <>
       {error && <div>{error}</div>}
       <form onSubmit={submitHandler}>
+
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
             Email
@@ -49,6 +50,7 @@ export default function Login({ setAuthState }) {
         </div>
         <button type="submit" className="btn btn-primary">Войти</button>
         {error && <div style={{ color: 'darkslategray', background: 'lightgreen' }}>Неверный пароль или почта</div>}
+
       </form>
     </>
   );
