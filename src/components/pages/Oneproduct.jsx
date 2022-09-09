@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Oneproduct({ product }) {
+  
   return (
     <div
       className="card mb-3 w-50 mx-auto"

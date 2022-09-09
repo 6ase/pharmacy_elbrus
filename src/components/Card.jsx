@@ -1,8 +1,17 @@
 import React from 'react';
 
 export default function Oneproduct({ product }) {
-  return (
+  const addBacket = async () => {
+    await fetch('/api/v1/backet', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(product.id),
+    });
+  };
 
+  return (
     <div
       className="card mb-3 mx-2"
       style={{ maxWidth: '540px', boxShadow: '4px 7px 6px 1px silver' }}
@@ -19,7 +28,7 @@ export default function Oneproduct({ product }) {
             <p className="card-text"><small className="text-muted" /></p>
             <div />
             <h5>{`Цена ${product.price} ₽`}</h5>
-            <a href="#" className="btn btn-success">Купить</a>
+            <button className="btn btn-success" onClick={addBacket}>Купить</button>
             <a href={`/products/${product.id}`} className="btn btn-success">Подробнее</a>
           </div>
         </div>

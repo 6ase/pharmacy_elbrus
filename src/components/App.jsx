@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Video from './Video';
 import Login from './Login';
 import Navbar from './Navbar';
 import Oneproduct from './pages/Oneproduct';
 import Registration from './Registration';
 import Products from './Products';
-import Carousel from './Carousel';
 import Backet from './pages/Backet';
 
 export default function App({ userSession, ProductById, allProducts }) {
@@ -18,8 +16,6 @@ export default function App({ userSession, ProductById, allProducts }) {
 
     <>
       <Navbar authState={authState} setAuthState={setAuthState} />
-
-      
 
       <Routes>
         <Route path="/" element={<Products path="/" allProducts={products} />} />
