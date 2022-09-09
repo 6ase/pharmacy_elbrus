@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Login from './Login';
 import Navbar from './Navbar';
@@ -14,9 +14,6 @@ export default function App({
   const [authState, setAuthState] = useState(userSession || null);
   const [search, setSearch] = useState('');
 
-  // useEffect(() => {
-  //   fetch('/api/products').then((res) => res.json()).then((data) => setProducts(data));
-  // }, []);
   return (
     <>
       <Navbar

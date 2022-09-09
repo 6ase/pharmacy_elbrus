@@ -6,11 +6,6 @@ import Layout from '../components/Layout';
 
 const router = express.Router();
 
-// router.get('/', async (req, res) => {
-//   const allStudents = await Product.findAll();
-//   const initState = { path: req.originalUrl, allStudents };
-//   res.layout(initState);
-// });
 router.get('/', async (req, res) => {
   const initState = { path: req.originalUrl };
   const layout = React.createElement(Layout, { initState });

@@ -11,7 +11,6 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   const currUserId = req.session.userSession.id;
   const userBasket = await Basket.findAll({ where: { user_id: currUserId }, include: Product });
-  // console.log(userBasket.Product);
   const initState = { path: req.originalUrl, userBasket };
   const layout = React.createElement(Layout, { initState });
   const html = renderToString(layout);

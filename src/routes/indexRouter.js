@@ -17,7 +17,6 @@ router.get('/', async (req, res) => {
 
 router.get('/api/products', async (req, res) => {
   const allProducts = await Product.findAll();
-  // console.log(allProducts);
   res.json({ allProducts });
 });
 

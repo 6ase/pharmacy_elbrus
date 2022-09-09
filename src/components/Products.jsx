@@ -3,19 +3,9 @@ import Video from './Video';
 import Card from './Card';
 import Carousel from './Carousel';
 
-export default function Products({ allProducts, search, setProducts }) {
-  // const [products, setProducts] = useState(allProducts || []);
-  // useEffect(() => {
-  //   fetch('/api/products')
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log('data', data);
-  //       setProducts(data.allProducts);
-  //     });
-  // }, []);
+export default function Products({ allProducts, search }) {
   return (
     <>
-      {console.log(allProducts)}
       <Video />
       <Carousel allProducts={allProducts} />
       <div className="row align-self-start">

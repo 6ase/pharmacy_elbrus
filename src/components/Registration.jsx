@@ -12,7 +12,6 @@ export default function Registration({ setAuthState }) {
   };
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(inputs);
     const response = await fetch('/user/signup', {
       method: 'POST',
       headers: {

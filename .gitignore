@@ -8,8 +8,8 @@ lerna-debug.log*
 .pnpm-debug.log*
 public/app.js
 public/vendor.js
-public/video/video2.mp4
 sessions/
+distr/
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

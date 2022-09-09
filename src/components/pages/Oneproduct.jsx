@@ -2,11 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 export default function Oneproduct({ product }) {
-  // const [currProduct, setCurrProduct] = useState({});
-  // const { id } = useParams();
-  // useEffect(() => {
-  //   fetch(`/api/products/${id}`).then(console.log);
-  // }, []);
   return (
     <div
       className="reg-container"

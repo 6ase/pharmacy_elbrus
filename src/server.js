@@ -1,6 +1,4 @@
 import express from 'express';
-import morgan from 'morgan';
-
 import session from 'express-session';
 import store from 'session-file-store';
 import indexProduct from './routes/indexProduct';
@@ -28,7 +26,6 @@ const sessionConfig = {
 };
 
 app.use(express.static('public'));
-app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(session(sessionConfig));
