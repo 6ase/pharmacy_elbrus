@@ -5,19 +5,17 @@ export default function Backet({ userBasket }) {
   const [productInBasket, setProductInBasket] = useState(userBasket || []);
 
   return (
-    <>
-      <div
-        className="reg-container"
-        style={{
-          width: '100vw',
-          height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        {productInBasket?.map((el) => <Cardinbasket key={el.Product.id} product={el.Product} />)}
-      </div>
+    <div
+      className="reg-container"
+      style={{
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      {productInBasket?.map((el) => <Cardinbasket key={el.Product.id} product={el.Product} />)}
       <div>
         <h2>
           {`Итого:${productInBasket?.reduce((sum, curr) => sum + curr.Product.price, 0)} ₽`}
@@ -25,6 +23,6 @@ export default function Backet({ userBasket }) {
         </h2>
       </div>
 
-    </>
+    </div>
   );
 }
