@@ -15,18 +15,4 @@ router.get('/', async (req, res) => {
   res.end(html);
 });
 
-router.get('/video', (req, res) => {
-  const initState = { path: req.originalUrl };
-  const layout = React.createElement(Layout, { initState });
-  const html = renderToString(layout);
-  res.write('<!DOCTYPE html>');
-  res.end(html);
-});
-router.get('/card', (req, res) => {
-  const initState = { path: req.originalUrl };
-  const layout = React.createElement(Layout, { initState });
-  const html = renderToString(layout);
-  res.write('<!DOCTYPE html>');
-  res.end(html);
-});
 export default router;

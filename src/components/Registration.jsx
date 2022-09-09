@@ -28,7 +28,10 @@ export default function Registration({ setAuthState }) {
   };
 
   return (
-    <div>
+    <div
+      className="card mb-3 w-50 d-flex"
+      style={{ maxWidth: '540px', boxShadow: '4px 7px 6px 1px silver' }}
+    >
       <h1>Регистрация</h1>
       <form onSubmit={submitHandler}>
         <div className="mb-3">

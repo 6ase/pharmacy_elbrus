@@ -8,13 +8,15 @@ export default function Carousel({ allProducts }) {
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
 
-          <div className="carousel-item active">
+          <h2>Товары недели специально для бабушек.</h2>
+
+          <div className="carousel-item active d-flex">
             <Card product={allProducts[getRandomInt()]} />
             <Card product={allProducts[getRandomInt()]} />
             <Card product={allProducts[getRandomInt()]} />
           </div>
 
-          <div className="carousel-item">
+          <div className="carousel-item active d-flex">
             <Card product={allProducts[getRandomInt()]} />
             <Card product={allProducts[getRandomInt()]} />
             <Card product={allProducts[getRandomInt()]} />

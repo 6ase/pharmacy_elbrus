@@ -3,11 +3,11 @@ import React from 'react';
 export default function Oneproduct({ product }) {
   return (
     <div
-      className="card mb-3"
-      style={{ maxWidth: '540px', boxShadow: '11px 14px 9px 1px silver', borderColor: 'darkgreen' }}
+      className="card mb-3 w-50 mx-auto"
+      style={{ maxWidth: '540px', boxShadow: '4px 7px 6px 1px silver' }}
     >
-      <div className="row g-0">
-        <div className="col-md-4">
+      <div className="row g-0 ">
+        <div className="col-md-3 ">
           <img src={`${product.img}`} className="img-fluid rounded-start img-thubnail" alt="таблеточка" />
         </div>
         <div
