@@ -4,6 +4,7 @@ export default function Video() {
   return (
     <div className="body_video">
       {/* <div className="full-screen"> */}
+      
       <div className="full-screen__body">
         <div className="full-screen__title"> АПТЭКО</div>
         <div className="full-screen__text">Бахнем и пойдём?</div>
